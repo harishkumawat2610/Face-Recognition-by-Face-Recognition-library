@@ -1,71 +1,36 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
 
 import face_recognition
 import cv2
 import pandas as pd
 
-
-
-# In[2]:
-
-
 video_capture = cv2.VideoCapture(0)
-
-
-# In[3]:
-
 
 #me
 hk_image = face_recognition.load_image_file("hk.jpg")
 hk_face_encoding = face_recognition.face_encodings(hk_image)[0]
 
-
-# In[4]:
-
-
 #khorwal
 kho_image = face_recognition.load_image_file("kho.jpg")
 kho_face_encoding = face_recognition.face_encodings(kho_image)[0]
-
-
-# In[5]:
-
 
 #jyoti mem
 jg_image = face_recognition.load_image_file("jg.jpg")
 jg_face_encoding = face_recognition.face_encodings(jg_image)[0]
 
-
-# In[6]:
-
-
 #vinesh jain sir
 vj_image = face_recognition.load_image_file("vj.jpg")
 vj_face_encoding = face_recognition.face_encodings(vj_image)[0]
-
-
-# In[7]:
-
 
 #vishnu sir
 vps_image = face_recognition.load_image_file("vps.jpg")
 vps_face_encoding = face_recognition.face_encodings(vps_image)[0]
 
-
-# In[8]:
-
-
 #tazi  sir
 tz_image = face_recognition.load_image_file("tz.jpg")
 tz_face_encoding = face_recognition.face_encodings(tz_image)[0]
-
-
-# In[9]:
-
 
 known_face_encodings = [
     hk_face_encoding,
